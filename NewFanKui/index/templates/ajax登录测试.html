@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+
+	<body>
+		<form action="">
+            {% csrf_token %}
+			<input type="text" name="uname" id="uname" value="" placeholder="请输入账号" />
+			<input type="password" name="upwd" id="upwd" value="" placeholder="请输入账号" />
+			<input type="button" value="登录" id="button" />
+		</form>
+	</body>
+	<script src="/static/js/jquery-1.11.0.min.js"></script>
+		<script>
+		$('#button').click(function() {
+			var uname=$('#uname').val()
+			var upwd=$("#upwd").val()
+			console.log(uname,upwd)
+			var data = {
+				"uname": uname,
+				"upwd": upwd
+			};
+			console.log(data)
+			$.ajax({
+
+				url: "/ajax/",
+				type: "POST",
+				data: data,
+//				contentType: "application/json;charset=utf-8",
+				async: false,
+				success: function(data) {
+					console.log(data)
+                   // window.location.href=data
+				}
+			});
+		})
+	</script>
+
+</html>

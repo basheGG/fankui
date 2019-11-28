@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<link rel="stylesheet" type="text/css" href="/static/css/feedback.css" />
+	</head>
+
+	<body>
+		<header>
+			<div id="head">
+				<div id="top-nav">
+					<span id="">
+						Iptvjam
+					</span>
+					<ul>
+						<li>
+							<a href="/index/">首页</a>
+						</li>
+						<li>
+							<a href="">公司简介</a>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</header>
+		<div id="feedback">
+			<div id="biaotoudiv">
+				<div class="biaotou" id="classify">请选择分类</div>
+				<div class="biaotou" id="program">
+					<span>请选择赛事</span>
+					<div class="com-sel">
+						<select class="com-opt">
+
+						</select>
+					</div>
+
+					<div class="search">
+						<img src="/static/img/sousuo_03.png" class="search_sousuo" />
+						<input type="text" class="search_input" />
+						<input type="button" class="search_btn" value="搜索" />
+					</div>
+				</div>
+				<div class="biaotou" id="problem">请选择问题类型</div>
+			</div>
+			<div id="classify-xiangqing">
+				<div class="classify-box" id="football">足球</div>
+				<div class="classify-box" id="basketball">篮球</div>
+				<div class="classify-box" id="tennis">网球</div>
+				<div class="classify-box" id="baseball">棒球</div>
+				<div class="classify-box" id="oliveball">橄榄球</div>
+				<div class="classify-box" id="puck">冰球</div>
+				<div class="classify-box" id="other">其他</div>
+			</div>
+			<form action="" method="post" id="form">
+				<!--autocomplete="off" onsubmit="return false"-->
+				<div id="qingkong">
+				</div>
+				<div id="check">
+					<div><label><div class="check"><span><input class="radio" name="problem" type="radio" value="赛事场次不一致" />　赛事场次不一致 </span></div></label></div>
+					<div><label><div class="check"><span><input class="radio" name="problem" type="radio" value="黑屏或无法播放" />　黑屏或无法播放</span></div></label></div>
+					<div><label><div class="check"><span><input class="radio" name="problem" type="radio" value="画面卡顿" />　画面卡顿 </span></div></label></div>
+					<div><label><div class="check"><span><input class="radio" name="problem" type="radio" value="声画不同步" />　声画不同步 </span></div></label></div>
+					<div><label><div class="check"><span><input class="radio" name="problem" type="radio" value="画面模糊影响观看" />　画面模糊影响观看 </span></div></label></div>
+					<div><label><div class="check"><span><input class="radio" name="problem" type="radio" value="音效问题影响观看" />　音效问题影响观看 </span></div></label></div>
+					<div><label><div class="check"><span><input class="radio" name="problem" type="radio" value="比赛结束后未下线" />　比赛结束后未下线 </span></div></label></div>
+					<div><label><div class="check"><span><input class="radio" name="problem" type="radio" value="无该场次直播匹配" />　无该场次直播匹配 </span></div></label></div>
+				</div>
+				<input id="sub-btn" type="button" value="确定提交" />
+				<span id="success">提交成功</span>
+				<p id="pagecount"></p>
+				<p id="pagecount1"></p>
+			</form>
+			<a href="/addyunyingdata/">我的反馈</a>
+		</div>
+		<footer>
+			<div id="foot">
+				<p>
+					商务合作　　bd.iptvjam.gmail.com　　© power by iptvjam　Alexa　　友情链接　　站长之家
+				</p>
+			</div>
+		</footer>
+
+		<script src="/static/js/jquery-1.11.0.min.js"></script>
+		<script src="/static/js/feedback.js"></script>
+		<script src="/static/js/search.js"></script>
+	</body>
+
+</html>

@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>django-websocket</title>
+    <script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
+    <script type="text/javascript">
+    $(function () {
+        //创建WebSocket对象获得连接
+        $('#connect_websocket').click(function () {
+            if(window.websocket){
+                window.websocket.close()
+            }
+            var websocket = new WebSocket("ws://" + window.location.host + "/echo");
+{#            var websocket = new WebSocket("ws://" + "192.168.2.177:8000" + "/echo");#}
+            //打开websocket连接
+            websocket.onopen = function () {
+                console.log('WebSocket open');
+            };
+
+            websocket.onmessage = function (responseData) {
+                console.log('message: ' + responseData.data);//浏览器控制台打印返回的数据
+                var jsondata = eval('(' + responseData.data + ')'); //将返回的数据转换为json对象
+                $('#messagecontainer').prepend('<p>' + jsondata.data + '</p>'); //展示数据
+            };
+
+            window.websocket = websocket;
+        });
+
+
+        //发送消息
+        $('#send_message').click(function () {
+            if(!window.websocket){
+                alert("请连接服务器");
+            }else{
+{#                window.websocket.send($('#message').val()); //发送字符串数据类型#}
+                window.websocket.send(JSON.stringify({"data":$('#message').val()}));//发送json数据类型
+            }
+        });
+        //关闭websocket连接
+        $('#close_websocket').click(function () {
+            if(window.websocket){
+                window.websocket.close();
+            }
+        });
+
+    });
+    </script>
+</head>
+<body>
+<br>
+向后端发送消息：<input type="text" id="message" value="已处理"/><br>
+<button type="button" id="connect_websocket">连接websocket</button>
+<button type="button" id="send_message">发送消息</button>
+<button type="button" id="close_websocket">关闭websocket</button>
+<h1>后台传过来的消息：</h1>
+<div id="messagecontainer">
+
+</div>
+</body>
+</html>

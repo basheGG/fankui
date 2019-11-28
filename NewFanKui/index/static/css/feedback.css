@@ -1,0 +1,457 @@
+﻿* {
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+}
+
+#head {
+	width: 100%;
+	height: 60px;
+	background-color: #FFFFFF;
+	/*border-bottom: 1px solid black;*/
+	box-shadow: 0px 2px 2px #bfbfbf;
+}
+
+#top-nav {
+	width: 1200px;
+	height: 100%;
+	/*background-color: red;*/
+	margin: auto;
+	position: relative;
+}
+
+#top-nav span {
+	display: block;
+	font-size: 22px;
+	line-height: 60px;
+	font-family: "微软雅黑";
+}
+
+#top-nav ul {
+	position: absolute;
+	left: 120px;
+	display: block;
+	height: 100%;
+	top: 0;
+}
+
+#top-nav ul li {
+	list-style: none;
+	float: left;
+	font-size: 16px;
+	margin-right: 40px;
+}
+
+#top-nav ul li a {
+	text-decoration: none;
+	color: #333333;
+	line-height: 60px;
+}
+
+footer {
+	width: 100%;
+	height: 80px;
+	background-color: #535353;
+}
+
+#foot {
+	text-align: center;
+}
+
+#foot p {
+	color: #FFFFFF;
+	font-family: "微软雅黑";
+	font-size: 12px;
+	line-height: 80px;
+}
+
+#feedback {
+	position: relative;
+	height: 842px;
+	width: 1200px;
+	margin: auto;
+	margin-top: 10px;
+	overflow: hidden;
+}
+
+#biaotoudiv {
+	position: relative;
+	height: 60px;
+	/*background-color: #e11d31;*/
+}
+
+.biaotou {
+	height: 60px;
+	background-color: #3288ff;
+	font-family: "微软雅黑";
+	font-size: 26px;
+	color: white;
+	line-height: 60px;
+	text-align: center;
+}
+
+#classify {
+	position: absolute;
+	width: 180px;
+	/*background-color: #3288ff;*/
+	left: 0;
+}
+
+#program {
+	position: absolute;
+	width: 730px;
+	/*background-color: blue;*/
+	left: 190px;
+}
+
+#problem {
+	position: absolute;
+	width: 270px;
+	/*background-color: aquamarine;*/
+	right: 0;
+}
+
+.search {
+	position: absolute;
+	top: 15px;
+	display: inline-block;
+	width: 250px;
+	height: 30px;
+	/*border: 1px solid #ccc; */
+	/*border-radius: 5px;*/
+	margin: auto 0;
+	background-color: #0e73ff;
+}
+
+.search_sousuo {
+	position: absolute;
+	left: 10px;
+	top: 8px;
+	opacity: 0.5;
+	z-index: 1;
+}
+
+.search_input {
+	position: absolute;
+	width: 170px;
+	right: 50px;
+	display: inline-block;
+	height: 28px;
+	line-height: 20px;
+	padding: 0 8px;
+	background-color: #0e73ff;
+	border-width: 0;
+	outline: none;
+	border-radius: 5px;
+	color: #FFFFFF;
+	/*background:url(/static/img/sousuo.png) no-repeat right center;
+				background-size: 10%;
+				background-position:10px center;*/
+}
+
+.search_btn {
+	position: absolute;
+	width: 50px;
+	height: 28px;
+	right: 0;
+	display: inline-block;
+	border-width: 0;
+	outline: none;
+	background-color: rgba(255, 255, 255, 0);
+	color: white;
+	font-size: 14px;
+	opacity: 0.5;
+}
+
+.search_btn:hover {
+	opacity: 1.0;
+}
+
+#program span {
+	position: absolute;
+	left: 30px;
+}
+
+#program .search {
+	position: absolute;
+	right: 30px;
+}
+
+.com-sel {
+	position: absolute;
+	line-height: 60px;
+	/*background-color: red;*/
+	width: 105px;
+	left: 180px;
+}
+
+.com-opt {
+	width: 75%;
+	height: 100%;
+	color: #ffffff;
+	font-size: 20px;
+	border: none;
+	outline: none;
+	/*去掉默认的下拉三角*/
+	appearance: none;
+	-moz-appearance: none;
+	-webkit-appearance: none;
+	/*添加下拉三角图标*/
+	/*background-color: #3288ff;
+				background: url(img/反馈事件_03.png) no-repeat right center transparent;*/
+	background-image: url(/static/img/xiala.png);
+	/*加载图片*/
+	background-color: #3288ff;
+	/*设置颜色，这里可以16进制的颜色，也可以常用的颜色单词*/
+	background-repeat: no-repeat;
+	/*设置平铺方式，repeat就是从左到右，从上到下平铺；repeat-x：从左往右平铺；repeat-y：从上往下平铺；不平铺no-repeat*/
+	background-position: right center;
+	/*设置图片位置，left top指左上对齐；还有left bottom;right top;right bottom;center top;center bottom;center center;left center;right center;*/
+	/*background-size是CSS3常用的属性*/
+}
+
+.classify-box {
+	width: 179px;
+	height: 60px;
+	text-align: left;
+	padding-left: 20px;
+	padding-right: 10px;
+	font-family: "微软雅黑";
+	font-size: 20px;
+	color: black;
+	line-height: 60px;
+	background-color: #FAFAFA;
+	cursor: default
+}
+
+
+/*.classify-box:nth-child(1){
+				background: url(img/icon.png) ;
+				background-position: 15px 402px;
+			}*/
+
+
+/*.gray {
+				-webkit-filter: grayscale(100%);
+				-moz-filter: grayscale(100%);
+				-ms-filter: grayscale(100%);
+				-o-filter: grayscale(100%);
+				filter: grayscale(100%);
+				filter: gray;
+			}*/
+
+#classify-xiangqing {
+	float: left;
+	height: 782px;
+	/*border-right: 1px solid #ededec;*/
+	background-color: #fafafa;
+}
+
+form {
+	width: 1008px;
+	height: 782px;
+	/*border: 1px solid red;*/
+	float: left;
+	margin-left: 10px;
+}
+
+.table {
+	width: 730px;
+	height: 56px;
+	/*background-color: #fafafa;*/
+	float: left;
+	/*height: 100%;*/
+	text-align: center;
+	border-bottom: 1px #ededec solid;
+	/*border-left: 1px #ededec solid;*/
+	/*border-right: 1px #ededec solid;*/
+	/*border-left: 1px #cfcfcf solid;*/
+	/*border-right: 1px #cfcfcf solid;*/
+	color: #666666;
+	padding-left: 10px;
+	table-layout: fixed;
+}
+
+.table:hover {
+	background-color: #deecff;
+}
+
+.table td {
+	height: 56px;
+	text-align: left;
+	line-height: 56px;
+	white-space: nowrap;
+	text-overflow: ellipsis;
+	overflow: hidden;
+	font-size: 14px;
+	/*width: 200px;*/
+}
+
+.table td:nth-child(1) {
+	width: 30px;
+}
+
+.table td:nth-child(2) {
+	width: 150px;
+	/*width: 200px;*/
+}
+
+.table td:nth-child(3) {
+	width: 150px;
+	/*width: 200px;*/
+}
+
+.table td:nth-child(4) {
+	width: 100px;
+	/*width: 150px;*/
+}
+
+.table td:nth-child(5) {
+	width: 100px;
+	/*width: 150px;*/
+}
+
+#check {
+	/*width: 270px;
+				position: absolute;
+				right: 0;
+				background-color: red;*/
+	float: right;
+	width: 269px;
+	height: 782px;
+	/*border-left: 1px solid #ededec;*/
+	background-color: #fafafa;
+}
+
+.check {
+	width: 270px;
+	height: 60px;
+	text-align: left;
+	font-family: "微软雅黑";
+	font-size: 20px;
+	color: black;
+	line-height: 60px;
+	/*font-weight: 700;*/
+	/*background-color: #fcfcfc;*/
+	/*border-bottom: 1px #ededec solid;*/
+	/*border-right: 1px #ededec solid;*/
+	overflow: hidden;
+	padding-left: 10px;
+}
+
+#sub-btn {
+	position: absolute;
+	width: 150px;
+	height: 60px;
+	background-color: #3288ff;
+	font-family: "微软雅黑";
+	font-size: 20px;
+	color: #feffff;
+	font-weight: 700;
+	border: 0;
+	right: 60px;
+	bottom: 90px;
+	outline: none
+}
+
+#sub-btn:hover {
+	background-color: #4291fa;
+}
+
+#sub-btn:active {
+	background-color: #227efd;
+}
+
+#qingkong {
+	/*display: inline-block;*/
+	float: left;
+	width: 730px;
+	height: 684px;
+	overflow: hidden;
+	/*border: 1px solid #ececec;*/
+}
+
+#qingkong div {
+	height: 57px;
+	/*border: 1px solid red;*/
+	background-color: #fafafa;
+}
+
+#feedback>a {
+	position: absolute;
+	width: 150px;
+	height: 60px;
+	background-color: #3288ff;
+	font-family: "微软雅黑";
+	font-size: 20px;
+	color: #feffff;
+	font-weight: 700;
+	right: 60px;
+	bottom: 20px;
+	text-align: center;
+	line-height: 60px;
+	text-decoration: none;
+}
+
+#feedback>a:hover {
+	background-color: #4291fa;
+}
+
+#feedback>a:active {
+	background-color: #227efd;
+}
+
+#pagecount {
+	position: absolute;
+	left: 295px;
+	top: 770px;
+	/*margin-left: 50%;*/
+	width: 500px;
+}
+
+#pagecount span {
+	display: inline-block;
+	width: 60px;
+	height: 30px;
+	border: 1px solid #ededec;
+	margin: 10px;
+	text-align: center;
+	line-height: 30px;
+	border-radius: 5px;
+}
+
+#pagecount span a {
+	text-decoration: none;
+}
+
+#pagecount1 {
+	position: absolute;
+	left: 295px;
+	top: 770px;
+	/*margin-left: 50%;*/
+	width: 500px;
+}
+
+#pagecount1 span {
+	display: inline-block;
+	width: 60px;
+	height: 30px;
+	border: 1px solid #ededec;
+	margin: 10px;
+	text-align: center;
+	line-height: 30px;
+	border-radius: 5px;
+}
+
+#pagecount1 span a {
+	text-decoration: none;
+}
+#success{
+	position: absolute;
+	right: 100px;
+	bottom: 170px;
+	color: red;
+	display: none;
+}
